@@ -51,10 +51,10 @@ SWAT-DL-soil-water/
 
 All scripts read the main working directory from `config.yaml`.
 
-Create a file named `config.yaml` in the main repository folder and define the project path:
+to change the path open th `config.yaml` in the main repository folder and define the project path:
 
 ```yaml
-base_dir: "/blue/cli2/22-SWAT_SWC"
+base_dir: "/C:/22-SWAT_SWC"
 ```
 
 To run the workflow on another computer or HPC system, replace this path with your own project directory.
@@ -62,7 +62,7 @@ To run the workflow on another computer or HPC system, replace this path with yo
 Example for Windows:
 
 ```yaml
-base_dir: "E:/SWAT_DL/22-SWAT_SWC"
+base_dir: "E:/22-SWAT_SWC"
 ```
 
 Example for Linux, macOS, or HPC:
@@ -83,17 +83,17 @@ Install the required Python packages using:
 pip install -r requirements.txt
 ```
 
-Recommended `requirements.txt`:
+`requirements.txt` includes:
 
 ```text
-numpy>=1.24
-pandas>=2.0
-openpyxl>=3.1
-matplotlib>=3.7
-seaborn>=0.12
-scikit-learn>=1.3
-torch>=2.0
-pyyaml>=6.0
+numpy
+pandas
+openpyxl
+matplotlib
+seaborn
+scikit-learn
+torch
+pyyaml
 ```
 
 ---
@@ -122,7 +122,7 @@ GALR_soilmoisture2020_F.csv
 
 ## Workflow Overview
 
-Run the scripts in the following order:
+The workflow should be run in the following order:
 
 ```text
 1_input_creator_e.py
@@ -155,7 +155,6 @@ The script then extracts the corresponding SWAT HRU outputs for each target HRU 
 
 - Reads soil moisture sensor data from `GALR_soilmoisture2020_F.csv`
 - Extracts SWAT HRU variables from `output.hru`
-- Optionally reads SWAT soil water layer variables from `output.swr`
 - Cleans negative and invalid sensor values
 - Interpolates missing sensor measurements
 - Aggregates sensor data to daily scale
@@ -479,20 +478,3 @@ On HPC systems, it is recommended to run the scripts through batch job files if 
 - The transfer learning script requires pretrained checkpoints from the source-site training script.
 - The multi-site training script can be run independently after the combined input workbook has been created.
 
----
-
-## Citation
-
-If you use this workflow, please cite the associated manuscript:
-
-```text
-[Add manuscript citation after publication]
-```
-
----
-
-## License
-
-```text
-[Add license information here, e.g., MIT License, if approved by all authors/institution]
-```
