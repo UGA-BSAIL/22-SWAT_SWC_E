@@ -120,6 +120,16 @@ GALR_soilmoisture2020_F.csv
 
 ---
 
+
+## Data Availability
+
+Large input data files are archived separately on Zenodo due to GitHub file-size limits.
+
+The dataset required to run this workflow is available at:
+
+**https://zenodo.org/records/20072215**
+
+
 ## Workflow Overview
 
 The workflow should be run in the following order:
