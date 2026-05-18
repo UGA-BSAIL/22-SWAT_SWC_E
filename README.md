@@ -123,11 +123,11 @@ GALR_soilmoisture2020_F.csv
 
 ## Data Availability
 
-Large input data files are archived separately on Zenodo due to GitHub file-size limits.
+Large input data files are archived separately on Google Drive due to GitHub file-size limits.
 
 The dataset required to run this workflow is available at:
 
-**https://zenodo.org/records/20072215**
+**https://drive.google.com/drive/folders/115dS2yAV6wopJEPYCzyvpkHjCuO7ipi4**
 
 
 ## Workflow Overview
